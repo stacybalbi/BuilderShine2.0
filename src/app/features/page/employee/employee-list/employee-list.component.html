@@ -1,0 +1,28 @@
+
+<div class="container">
+    <h3 class="text-center p-3">
+        <span style="color: #110949"> </span>
+          <span ><i class="bi bi-building"></i> Employee </span>
+      
+          <hr>
+          <div class="text-center">
+            <button routerLink="/employee-create" type="button" class="btn btn-success"><i class="bi-alarm"></i>Register employee </button>
+        </div>
+        </h3>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-2">Name</div>
+        <div class="col col-3">LastName</div>  
+        <div class="col col-5">Actions</div> 
+      </li>
+      <li class="table-row" *ngFor="let employee of employee" >
+        <div class="col col-2" >{{employee.name}}</div>
+        <div class="col col-3" >{{employee.lastname}}</div>
+        <div class="col col-4"> 
+          <i  routerLink="/employee-edit/{{(employee.id)}}"class="far fa-edit" style="color:green">  </i>
+          <i  (click)="ShowModal(employee.id)" class="far fa-trash-alt" style="color:red"></i>
+      </div>
+      
+      </li>
+    </ul>
+  </div>

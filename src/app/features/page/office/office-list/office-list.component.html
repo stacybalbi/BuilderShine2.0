@@ -1,0 +1,30 @@
+
+<div class="container">
+    <h3 class="text-center p-3">
+        <span style="color: #110949"> </span>
+          <span ><i class="bi bi-building"></i> Offices </span>
+      
+          <hr>
+          <div class="text-center">
+            <button routerLink="/office-create" type="button" class="btn btn-success"><i class="bi-alarm"></i>Register office </button>
+        </div>
+        </h3>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Name</div>
+        <div class="col col-2">Address</div>  
+        <div class="col col-3">Business</div> 
+        <div class="col col-4">Actions</div> 
+      </li>
+      <li class="table-row" *ngFor="let Office of office" >
+        <div class="col col-1" >{{Office.name}}</div>
+        <div class="col col-2" >{{Office.adress.street}}</div>
+        <div class="col col-3" >{{Office.business.name}}</div>
+        <div class="col col-4"> 
+          <i  routerLink="/office-edit/{{(Office.id)}}"class="far fa-edit" style="color:green">  </i>
+          <i  (click)="ShowModal(Office.id)" class="far fa-trash-alt" style="color:red"></i>
+      </div>
+      
+      </li>
+    </ul>
+  </div>

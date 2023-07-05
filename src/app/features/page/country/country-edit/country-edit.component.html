@@ -1,0 +1,13 @@
+<form class="form" [formGroup]="dataform" (ngSubmit)="submit()">
+    <h2>Create Country</h2>
+    <p type="Name:"><input type="text" formControlName="name"></p>
+
+    <p type="Cost Center:">
+      <select class="form-control" formControlName="costCenterId" >
+        <option *ngFor="let costCenter of costcenter" value="{{costCenter.id}}">{{costCenter.name}}</option>
+      </select>
+    </p>
+    
+    <button type="submit" >Submit</button>
+  
+  </form>

@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="dataform" (ngSubmit)="submit()">
+    <h2>Create Office</h2>
+    <p type="Name:"><input type="text" formControlName="name"></p>
+    <p type="Addres:">
+      <select class="form-control" formControlName="adressId" >
+        <option *ngFor="let Adress of adress" value="{{Adress.id}}">{{Adress.street}}</option>
+      </select>
+    </p>
+    <p type="Business:">
+      <select class="form-control" formControlName="businessId" >
+        <option *ngFor="let Business of business" value="{{Business.id}}">{{Business.name}}</option>
+      </select>
+    </p>
+    
+    <button type="submit">Submit</button>
+  
+  </form>

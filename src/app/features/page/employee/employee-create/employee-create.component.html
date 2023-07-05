@@ -1,0 +1,11 @@
+<!-- [formGroup]="dataform" (ngSubmit)="submit()" -->
+
+<form class="form" [formGroup]="dataform" (ngSubmit)="submit()">
+    <h2>Create Employee</h2>
+    <p type="Name:"><input type="text" formControlName="name"></p>
+    <p type="Last Name:"><input type="text" formControlName="lastname"></p>
+    
+    <button type="submit">Submit</button>
+  
+  </form>
+

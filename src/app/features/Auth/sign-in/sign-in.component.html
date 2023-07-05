@@ -1,0 +1,44 @@
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>Sign</span>
+            <span>In</span>
+          </div>
+          <div class="app-contact">BUILDER SHINE - DON'T HAVE ACCOUNT? 
+            <button class="app-form-button" routerLink="/sign-up">SIGN-UP</button></div>
+        </div>
+        <div class="screen-body-item">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="USERNAME"  formControlName="username">
+              </div>
+              <div class="app-form-group">
+                <input type="password" class="app-form-control" placeholder="PASSWORD"  formControlName="password">
+              </div>
+              <div class="app-form-group buttons">
+                <button type="submit" class="app-form-button" [disabled]="!form.valid">SEND</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

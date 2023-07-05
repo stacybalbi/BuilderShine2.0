@@ -1,0 +1,53 @@
+<div class="background">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>Sign</span>
+              <span>Up</span>
+            </div>
+            <div class="app-contact">BUILDER SHINE</div>
+          </div>
+          <div class="screen-body-item">
+            <form [formGroup]="dataform" (ngSubmit)="submit()">>
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="NAME" formControlName="name">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="LASTNAME" formControlName="lastname">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" placeholder="USERNAME" formControlName="username">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" type="email" placeholder="EMAIL" formControlName="email">
+              </div>
+              <div class="app-form-group ">
+                <input class="app-form-control" type="password" placeholder="PASSWORD" formControlName="password">
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button"  routerLink="/sign-in">CANCEL</button>
+                <button class="app-form-button" type="submit">SEND</button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

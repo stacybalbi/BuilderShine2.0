@@ -1,0 +1,16 @@
+<form class="form" [formGroup]="dataform" (ngSubmit)="submit()">
+    <h2>Create Department-Employee</h2>
+    <p type="Department:">
+      <select class="form-control" formControlName="departmentId" >
+        <option *ngFor="let Department of department" value="{{Department.id}}">{{Department.name}}</option>
+      </select>
+    </p>
+    <p type="Employee:">
+      <select class="form-control" formControlName="employeeId" >
+        <option *ngFor="let Employee of employee" value="{{Employee.id}}">{{Employee.name}}</option>
+      </select>
+    </p>
+    
+    <button type="submit">Submit</button>
+  
+  </form>

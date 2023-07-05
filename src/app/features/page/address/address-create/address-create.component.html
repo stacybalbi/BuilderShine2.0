@@ -1,0 +1,29 @@
+<!-- [formGroup]="dataform" (ngSubmit)="submit()" -->
+<form class="form" [formGroup]="dataform" (ngSubmit)="submit()">
+  <h2>Create Address</h2>
+  
+  <p type="Street:"><input type="text" formControlName="street"></p>
+  
+  <p type="Numeration:"><input type="text" formControlName="numeration"></p>
+  
+  <p type="City:"><input type="text" formControlName="city"></p>
+  
+  <p type="State:"><input type="text" formControlName="state"></p>
+  
+  <p type="PostCode:"><input type="text" formControlName="postCode"></p>
+  
+  <p type="Country">
+    <select class="form-control" formControlName="countryId" >
+      <option *ngFor="let Country of country" value="{{Country.id}}">{{Country.name}}</option>
+    </select>
+  </p>
+
+  
+
+  
+
+ 
+  
+  <button type="submit">Submit</button>
+
+</form>
